@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> ZTREE DEMO </TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+	body {
+	background-color: white;
+	margin:0; padding:0;
+	text-align: center;
+	}
+	div, p, table, th, td {
+		list-style:none;
+		margin:0; padding:0;
+		color:#333; font-size:12px;
+		font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	}
+	#testIframe {margin-left: 10px;}
+  </style>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+  <SCRIPT type="text/javascript" >
+  <!--
+
+
+	$(document).ready(function(){
+
+		var zTree;
+		var demoIframe;
+
+		var setting = {
+			view: {
+				dblClickExpand: false,
+				showLine: true,
+				showIcon: false,
+				selectedMulti: false
+			},
+			data: {
+				simpleData: {
+					enable:true,
+					idKey: "id",
+					pIdKey: "pId",
+					rootPId: ""
+				}
+			},
+			callback: {
+				beforeClick: function(treeId, treeNode) {
+					var zTree = $.fn.zTree.getZTreeObj("#tree");
+				},
+	 
+				
+			}
+		};
+				
+		var segments = [];
+		
+		var indexNodes =[
+			{id:1, pId:0, name:"Table of Contents", open:true},
+		];
+		
+		
+
+		
+		
+		
+		  
+	});
+
+	function loadReady() {
+		var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
+		htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+		maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+		h = demoIframe.height() >= maxH ? minH:maxH ;
+		if (h < 530) h = 530;
+		
+	}
+
+  //-->
+  </SCRIPT>
+  
+ </HEAD>
+
+<BODY>
+<TABLE border=0 height=600px align=left>
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+			<ul id="tree" class="ztree" style="width:260px;overflow: hidden; position: fixed; z-index: 2147483647; border: 0px none; left: 0px;  top: 0px;">
+				
+			</ul>
+		</TD>
+		<TD width=770px align=left valign=top>
+			 
+			 <a id="tree_4_a" class="level2" treenode_a="" onclick="" href="#3" target="_blank" style="" title="1.1.1. dsds"></a>
+				
+				<h1>dsds</h1>
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h2>dsds</h2>
+				
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h3>dsds</h3>
+				
+				<h1>说的，第二个</h1>
+				
+				<h1>第三个</h1>
+				  
+				<h2>ssssss</h2>
+				
+				<h2>ddddddd</h2>
+				<h2>333333</h2>
+				<h2>dsds</h2>
+				<h2>dsds</h2>
+				
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h3>dsds</h3>
+	 
+		 
+			 
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

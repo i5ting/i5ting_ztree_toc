@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> ZTREE DEMO </TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+	body {
+	background-color: white;
+	margin:0; padding:0;
+	text-align: center;
+	}
+	div, p, table, th, td {
+		list-style:none;
+		margin:0; padding:0;
+		color:#333; font-size:12px;
+		font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	}
+	#testIframe {margin-left: 10px;}
+  </style>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="jquery.ztree_toc.js"></script>
+  <SCRIPT type="text/javascript" >
+  <!--
+
+
+	$(document).ready(function(){
+
+		$('#tree').ztree_toc({
+			
+		});
+		
+		  
+	});
+  //-->
+  </SCRIPT>
+  
+ </HEAD>
+
+<BODY>
+<TABLE border=0 height=600px align=left>
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+			<ul id="tree" class="ztree" style="">
+				
+			</ul>
+		</TD>
+		<TD width=770px align=left valign=top>
+			 
+			 <a id="tree_4_a" class="level2" treenode_a="" onclick="" href="#3" target="_blank" style="" title="1.1.1. dsds"></a>
+				
+				<h1>第一个</h1>
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h2>第三方 </h2>
+				<h2>第4方 </h2>
+				
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h3>dsds</h3>
+				<h4>dsds</h4>
+				
+				<h1>说的，第二个</h1>
+				
+				 <h3>第三方 </h3>
+		 
+			 
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

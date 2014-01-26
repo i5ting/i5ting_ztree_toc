@@ -106,7 +106,6 @@ function factor(opts ,count,current){
 	 * 将已有header编号，并重命名
 	 */	
 	function _rename_header_content(opts ,header_obj ,level){
-
 		if(opts._headers.length == level) {
 			opts._headers[level - 1]++;
 		} else if(opts._headers.length > level) {
@@ -119,7 +118,9 @@ function factor(opts ,count,current){
 			}
 		}
 		
-		$(header_obj).text(opts._headers.join('.') + '. ' + $(header_obj).text());
+		if(opts.is_auto_number == true){
+			$(header_obj).text(opts._headers.join('.') + '. ' + $(header_obj).text());
+		}
 	}
 	
 	/*
@@ -171,6 +172,7 @@ function factor(opts ,count,current){
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content", t:"我很普通，随便 展开/折叠 我吧", open:true}],
 		debug: true,
 		is_posion_top: false,
+		is_auto_number: false,
 		/*
 		 * 默认是否展开全部
 		 */	

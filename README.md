@@ -57,16 +57,19 @@ v0.0.6
 
 ## TODO
 
-- [-] documment_selector: 'body',
-- [-] is_posion_top: false,
+[-] documment_selector: 'body',
+
+[-] is_posion_top: false,
 		/*
 		 * 默认是否显示header编号
 		 */
-- [-] is_auto_number: false,
+		 
+[-] is_auto_number: false,
 		/*
 		 * 默认是否展开全部
 		 */	
-- [-] is_expand_all: true,
+		 
+[-] is_expand_all: true,
 		/*
 		 * 是否对选中行，显示高亮效果
 		 */	

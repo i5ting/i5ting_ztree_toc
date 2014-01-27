@@ -169,7 +169,7 @@ function factor(opts ,count,current){
 	$.fn.ztree_toc.defaults = {
 		_zTree: null,
 		_headers: [],
-		_header_nodes: [{ id:1, pId:0, name:"Table of Content", t:"我很普通，随便 展开/折叠 我吧", open:true}],
+		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
 		is_posion_top: false,
 		is_auto_number: false,
@@ -184,7 +184,7 @@ function factor(opts ,count,current){
 		step: 100,
 		ztreeStyle: {
 			width:'260px',
-			overflow: 'hidden',
+			overflow: 'auto',
 			position: 'fixed',
 			'z-index': 2147483647,
 			border: '0px none',

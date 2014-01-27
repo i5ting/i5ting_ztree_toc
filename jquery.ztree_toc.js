@@ -172,6 +172,9 @@ function factor(opts ,count,current){
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
 		is_posion_top: false,
+		/*
+		 * 默认是否显示header编号
+		 */
 		is_auto_number: false,
 		/*
 		 * 默认是否展开全部

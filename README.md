@@ -2,6 +2,10 @@
 
 this is a jQuery plugin for preview  markdown table of content
 
+![](demo/1.png)
+
+![](demo/2.png)
+
 ## Usage
 
 Add this line to your html file:

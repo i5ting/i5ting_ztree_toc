@@ -43,43 +43,18 @@ And then execute:
 
 ## 版本历史
 
-v0.0.5
-完成了基本功能，打开编辑，实时预览。
+- v0.1.0 初始化版本 
 
-TODO
-v0.0.6
+## Checklist
 
-记成bootstrap
-支持vim
-支持保存和打开
-支持布局，左右全屏等
-
-
-## TODO
-
-[-] documment_selector: 'body',
-
-[-] is_posion_top: false,
-		/*
-		 * 默认是否显示header编号
-		 */
-		 
-[-] is_auto_number: false,
-		/*
-		 * 默认是否展开全部
-		 */	
-		 
-[-] is_expand_all: true,
-		/*
-		 * 是否对选中行，显示高亮效果
-		 */	
-
-- [] is_highlight_selected_line
-- [] Completely customizable
-- [] Click to smooth scroll to that spot on the page
-- [] Automatically highlight the current section
-- [] Extremely lightweight (744 bytes gzipped)
-- [] Can have multiple on a page
+- Completely customizable documment selector: 'body' 自定义header文档位置，此处为jq的选择器（已完成）
+- is_auto_number: false, 默认是否显示header编号（已完成）
+- is_expand_all: true,默认是否展开全部（已完成）
+- is_highlight_selected_line是否对选中行，显示高亮效果（TODO）
+- Click to smooth scroll to that spot on the page（TODO）
+- Automatically highlight the current section（TODO）
+- Extremely lightweight (744 bytes gzipped)（TODO）
+- Can have multiple on a page（TODO）
 
 ## Example
 

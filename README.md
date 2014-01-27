@@ -61,14 +61,6 @@ or see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - Extremely lightweight (744 bytes gzipped)（TODO）
 - Can have multiple on a page（TODO）
 
-## Example
-
-```javascript
-$('#tree').ztree_toc({
-
-});
-```
-
 ## License
 
 this gem is released under the [MIT License](http://www.opensource.org/licenses/MIT).

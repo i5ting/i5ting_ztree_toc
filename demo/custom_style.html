@@ -3,7 +3,7 @@
  <HEAD>
   <TITLE> ZTREE ToC DEMO </TITLE>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css" type="text/css">
   <style>
 	body {
 	background-color: white;
@@ -25,15 +25,22 @@
 		opacity: 0.8;
 	}
   </style>
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
-<script type="text/javascript" src="jquery.ztree_toc.js"></script>
+<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="../jquery.ztree_toc.js"></script>
 	<SCRIPT type="text/javascript" >
 	<!--
 	$(document).ready(function(){
 		$('#tree').ztree_toc({
-			is_auto_number: true,
-			// documment_selector: '.first_part'
+			ztreeStyle: {
+				width:'260px',
+				overflow: 'auto',
+				position: 'fixed',
+				'z-index': 2147483647,
+				border: '0px none',
+				left: '0px',
+				top: '0px'
+			}
 		});
 	});
 	//-->

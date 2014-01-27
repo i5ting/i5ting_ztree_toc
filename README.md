@@ -22,6 +22,15 @@ And then execute:
 	//-->
 	</SCRIPT>
 	
+## 例子
+
+	$(document).ready(function(){
+		$('#tree').ztree_toc({
+			is_auto_number: true,
+			// documment_selector: '.first_part'
+		});
+	});
+	
 
 ## Contributing
 
@@ -46,6 +55,28 @@ v0.0.6
 支持布局，左右全屏等
 
 
+## TODO
+
+- [-] documment_selector: 'body',
+- [-] is_posion_top: false,
+		/*
+		 * 默认是否显示header编号
+		 */
+- [-] is_auto_number: false,
+		/*
+		 * 默认是否展开全部
+		 */	
+- [-] is_expand_all: true,
+		/*
+		 * 是否对选中行，显示高亮效果
+		 */	
+
+- [] is_highlight_selected_line
+- [] Completely customizable
+- [] Click to smooth scroll to that spot on the page
+- [] Automatically highlight the current section
+- [] Extremely lightweight (744 bytes gzipped)
+- [] Can have multiple on a page
 
 ## Example
 

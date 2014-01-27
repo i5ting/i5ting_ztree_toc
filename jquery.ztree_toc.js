@@ -1,7 +1,10 @@
 /**
- * jquery.ztree_toc.js
- * data: 2014-01-25
+ * jquery.ztree_toc.js - A jQuery plugin that will automatically generate a table of contents. 
+ * v0.1.0
+ * https://github.com/i5ting/jQuery.zTree_Toc.jss
+ * created_at: 2014-01-25
  * author: alfred sang
+ * MIT License
  */
 
 /**

@@ -60,6 +60,8 @@ or see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - Automatically highlight the current section（TODO）
 - Extremely lightweight (744 bytes gzipped)（TODO）
 - Can have multiple on a page（TODO）
+- 正文移动，更新目录（TODO）
+- 滚动动画（TODO）
 
 ## License
 

@@ -58,9 +58,9 @@ or see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - is_highlight_selected_line是否对选中行，显示高亮效果（TODO）
 - Click to smooth scroll to that spot on the page（TODO）
 - Automatically highlight the current section（TODO）
-- Extremely lightweight (744 bytes gzipped)（TODO）
+- Extremely lightweight (2,963|1,514 bytes gzipped)（已完成）
 - Can have multiple on a page（TODO）
-- 正文移动，更新目录（TODO）
+- 正文移动，更新目录（已完成）
 - 滚动动画（TODO）
 
 ## License

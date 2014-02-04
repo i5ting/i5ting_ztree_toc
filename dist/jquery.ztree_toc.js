@@ -1,25 +1,19 @@
-/*! ztree_toc - v0.1.0 - 2014-01-27
+/*! ztree_toc - v0.1.0 - 2014-02-04
 * https://github.com/i5ting/jQuery.zTree_Toc.js
 * Copyright (c) 2014 alfred.sang; Licensed MIT */
-/**
- * 1.1.1 = 1*100*100 + 1*100 + 1
- * 1.2.2 = 1*100*100 + 2*100 + 3
- *
- * 1 = 0*100 +1
- */ 
 function encode_id_with_array(opts,arr){
-	console.log('---------------- get_id_with_str start---------------\n');
+	// console.log('---------------- get_id_with_str start---------------\n');
 
 	var result = 0;
   	for(var z = 0; z < arr.length; z++ ){  
 		// str += opts.step+'*' +  opts.step + '*';
 		
 		result += factor(opts, arr.length - z ,arr[z]);
-		console.log('z = ' + z + ',result=' ,result);
+		// console.log('z = ' + z + ',result=' ,result);
   	}
 
-	console.log('result all = '+result);
-	console.log('--------------end-----------------\n');
+	// console.log('result all = '+result);
+	// console.log('--------------end-----------------\n');
 	
 	return result;
 }
@@ -35,7 +29,7 @@ function encode_id_with_array(opts,arr){
 
  */ 
 function get_parent_id_with_array(opts,arr){
-	console.log('---------------- get_id_with_str start---------------\n');
+	// console.log('---------------- get_id_with_str start---------------\n');
 	var result_arr = [];
 
   	for(var z = 0; z < arr.length; z++ ){  
@@ -49,11 +43,11 @@ function get_parent_id_with_array(opts,arr){
 		// str += opts.step+'*' +  opts.step + '*';
 		
 		result += factor(opts,result_arr.length - z,result_arr[z]);
-		console.log('z = ' + z + ',result=',result);
+		// console.log('z = ' + z + ',result=',result);
   	}
 
-	console.log('result all = '+result);
-	console.log('--------------end-----------------\n');
+	// console.log('result all = '+result);
+	// console.log('--------------end-----------------\n');
 	
 	return result;
 }
@@ -68,7 +62,7 @@ function factor(opts ,count,current){
 		str += current * opts.step+'*';
 	}
 	
-	console.log('str = '+str);
+	// console.log('str = '+str);
 	
 	return eval( str + '1' );
 }
@@ -132,6 +126,10 @@ function factor(opts ,count,current){
 
 		log($(header_obj).text());
 		
+		opts._header_offsets.push($(header_obj).offset().top - opts.highlightOffset);
+		
+		log('h offset ='+( $(header_obj).offset().top - opts.highlightOffset ) );
+		
 		opts._header_nodes.push({
 			id:id, 
 			pId:pid , 
@@ -142,7 +140,47 @@ function factor(opts ,count,current){
 		});
 	}
 	
+	/*
+	 * 根据滚动确定当前位置，并更新ztree
+	 */	
+	function bind_scroll_event_and_update_postion(opts){
+	    var timeout;
+	    var highlightOnScroll = function(e) {
+	      if (timeout) {
+	        clearTimeout(timeout);
+	      }
+	      timeout = setTimeout(function() {
+	        var top = $(window).scrollTop(),highlighted;
+			  
+			if(opts.debug) console.log('top='+top);
+			
+	        for (var i = 0, c = opts._header_offsets.length; i < c; i++) {
+	          if (opts._header_offsets[i] >= top) {
+				  console.log('opts._header_offsets['+ i +'] = '+opts._header_offsets[i]);
+				  $('a').removeClass('curSelectedNode');
+				  // 由于有root节点，所以i应该从1开始
+				  var obj = $('#tree_' + (i+1) + '_a').addClass('curSelectedNode');
+	            break;
+	          }
+	        }
+	      }, opts.refresh_scroll_time);
+	    };
+		
+	    if (opts.highlight_on_scroll) {
+	      $(window).bind('scroll', highlightOnScroll);
+	      highlightOnScroll();
+	    }
+	}
+	
+	/*
+	 * 初始化
+	 */	
+	function init_with_config(opts){
+		opts.highlightOffset = $(opts.documment_selector).offset().top;
+	}
+	
 	function log(str){
+		return;
 		if($.fn.ztree_toc.defaults.debug == true){
 			console.log(str);
 		}
@@ -155,9 +193,17 @@ function factor(opts ,count,current){
 		return this.each(function(){
 			opts._zTree = $(this);
 			
+			// 初始化
+			init_with_config(opts);
+			
+			// 创建table of content，获取元数据_headers
 			create_toc(opts);
 			
+			// 根据_headers生成ztree
 			render_with_ztree(opts);
+			
+			// 根据滚动确定当前位置，并更新ztree
+		    bind_scroll_event_and_update_postion(opts);
 		})
 		// each end
 	}
@@ -166,8 +212,12 @@ function factor(opts ,count,current){
 	$.fn.ztree_toc.defaults = {
 		_zTree: null,
 		_headers: [],
+		_header_offsets: [],
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
+		highlightOffset: 0,
+		highlight_on_scroll: true,
+		refresh_scroll_time: 50,
 		documment_selector: 'body',
 		is_posion_top: false,
 		/*
@@ -210,6 +260,7 @@ function factor(opts ,count,current){
 			},
 			callback: {
 				beforeClick: function(treeId, treeNode) {
+					$('a').removeClass('curSelectedNode');
 					if($.fn.ztree_toc.defaults.is_highlight_selected_line == true){
 						$('#' + treeNode.id).css('color' ,'red').fadeOut("slow" ,function() {
 						    // Animation complete.

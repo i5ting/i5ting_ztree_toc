@@ -6,6 +6,12 @@ this is a jQuery plugin for preview  markdown table of content
 
 ![](demo/2.png)
 
+![](demo/3.png)
+
+![](demo/4.png)
+
+![](demo/5.png)
+
 ## Usage
 
 Add this line to your html file:
@@ -62,6 +68,7 @@ or see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - Can have multiple on a page（TODO）
 - 正文移动，更新目录（已完成）
 - 滚动动画（TODO）
+- right click to config（TODO）
 
 ## License
 

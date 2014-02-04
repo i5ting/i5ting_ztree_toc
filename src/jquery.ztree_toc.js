@@ -196,7 +196,7 @@ function factor(opts ,count,current) {
 			
 			// 根据滚动确定当前位置，并更新ztree
 		    bind_scroll_event_and_update_postion(opts);
-		})
+		});
 		// each end
 	}
 	
@@ -266,7 +266,13 @@ function factor(opts ,count,current) {
 							$(this).show().css('color','black');
 						});
 					}
-				}	
+				},
+				onRightClick: function(event, treeId, treeNode) {
+					if(treeNode.id == 1){
+						// TODO: when right_click root node:table content
+						console.log('right_click root table of content');
+					}
+				}
 			}
 		}
 	};

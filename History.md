@@ -5,3 +5,13 @@
   * added readme
   * got everything working
   * initial commit
+  
+0.2.0 / 2014-02-04
+==================
+  
+  * 支持正文滚动，同时更新ztree
+  * 自动排序
+  * 自定义样式
+  * 支持容器内正文
+  * 支持默认是否展开
+  * 支持是否高亮选中行

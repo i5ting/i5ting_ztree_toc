@@ -20,6 +20,10 @@ Add this line to your html file:
 	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
 	<script type="text/javascript" src="jquery.ztree_toc.js"></script>
 
+Add this line to your html file:
+
+	 <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css" type="text/css">
+
 And then execute:
 
 	<SCRIPT type="text/javascript" >

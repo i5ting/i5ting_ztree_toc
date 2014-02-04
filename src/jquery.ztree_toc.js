@@ -5,19 +5,11 @@
  * 1 = 0*100 +1
  */ 
 function encode_id_with_array(opts,arr){
-	// console.log('---------------- get_id_with_str start---------------\n');
-
 	var result = 0;
   	for(var z = 0; z < arr.length; z++ ){  
-		// str += opts.step+'*' +  opts.step + '*';
-		
 		result += factor(opts, arr.length - z ,arr[z]);
-		// console.log('z = ' + z + ',result=' ,result);
   	}
 
-	// console.log('result all = '+result);
-	// console.log('--------------end-----------------\n');
-	
 	return result;
 }
 
@@ -32,7 +24,6 @@ function encode_id_with_array(opts,arr){
 
  */ 
 function get_parent_id_with_array(opts,arr){
-	// console.log('---------------- get_id_with_str start---------------\n');
 	var result_arr = [];
 
   	for(var z = 0; z < arr.length; z++ ){  
@@ -43,14 +34,8 @@ function get_parent_id_with_array(opts,arr){
 	
 	var result = 0;
   	for(var z = 0; z < result_arr.length; z++ ){  
-		// str += opts.step+'*' +  opts.step + '*';
-		
 		result += factor(opts,result_arr.length - z,result_arr[z]);
-		// console.log('z = ' + z + ',result=',result);
   	}
-
-	// console.log('result all = '+result);
-	// console.log('--------------end-----------------\n');
 	
 	return result;
 }
@@ -64,9 +49,7 @@ function factor(opts ,count,current){
 	for(var i = count - 1;i > 0; i-- ){
 		str += current * opts.step+'*';
 	}
-	
-	// console.log('str = '+str);
-	
+
 	return eval( str + '1' );
 }
 

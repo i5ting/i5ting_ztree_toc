@@ -1,0 +1,239 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>README</title>
+					
+					<link href="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc//style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>jQuery.zTree_Toc.js</h1>
+
+<p>this is a jQuery plugin for preview  markdown table of content</p>
+
+<p><img src="demo/3.png" alt=""></p>
+
+<p><img src="demo/4.png" alt=""></p>
+
+<p><img src="demo/5.png" alt=""></p>
+
+<p><img src="demo/1.png" alt=""></p>
+
+<p><img src="demo/2.png" alt=""></p>
+
+<h2>Usage</h2>
+
+<p>Add this line to your html file:</p>
+<div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;js/jquery-1.4.4.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;js/jquery.ztree.core-3.5.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;jquery.ztree_toc.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+<p>Add this line to your html file:</p>
+<div class="highlight"><pre> <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;../css/zTreeStyle/zTreeStyle.css&quot;</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="o">&gt;</span>
+</pre></div>
+<p>And then execute:</p>
+<div class="highlight"><pre><span class="nt">&lt;SCRIPT</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="nt">&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">$(document).ready(function(){</span>
+<span class="c">    $(&#39;#tree&#39;).ztree_toc({</span>
+
+<span class="c">    });</span>
+<span class="c">});</span>
+<span class="c">//--&gt;</span>
+<span class="nt">&lt;/SCRIPT&gt;</span>
+</pre></div>
+<h2>例子</h2>
+
+<p>@see demo/*.html</p>
+
+<p>for example:</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#tree&#39;</span><span class="p">).</span><span class="nx">ztree_toc</span><span class="p">({</span>
+        <span class="nx">is_auto_number</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="c1">// documment_selector: &#39;.first_part&#39;</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am &#39;Add some feature&#39;</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+
+<p>or @see at <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+
+<h2>版本历史</h2>
+
+<ul>
+<li>v0.1.0 初始化版本 </li>
+<li>v0.2.0 支持正文滚动，同时更新ztree</li>
+</ul>
+
+<p>@see at <a href="History.md">History.md</a></p>
+
+<h2>Checklist</h2>
+
+<ul>
+<li>Completely customizable documment selector: &#39;body&#39; 自定义header文档位置，此处为jq的选择器（已完成）</li>
+<li>is_auto_number: false, 默认是否显示header编号（已完成）</li>
+<li>is_expand_all: true,默认是否展开全部（已完成）</li>
+<li>is_highlight_selected_line是否对选中行，显示高亮效果（TODO）</li>
+<li>Click to smooth scroll to that spot on the page（TODO）</li>
+<li>Automatically highlight the current section（TODO）</li>
+<li>Extremely lightweight (2,963|1,514 bytes gzipped)（已完成）</li>
+<li>Can have multiple on a page（TODO）</li>
+<li>正文移动，更新目录（已完成）</li>
+<li>滚动动画（TODO）</li>
+<li>right click to config（TODO）</li>
+</ul>
+
+<h2>License</h2>
+
+<p>this gem is released under the <a href="http://www.opensource.org/licenses/MIT">MIT License</a>.</p>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="/Users/sang/.rvm/gems/ruby-2.1.0@rails4.0/gems/tocmd-0.0.9/vendor/toc/js/jquery.ztree_toc.min.js"></script>
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+				$('#tree').ztree_toc({
+					is_auto_number:true,
+					documment_selector:'.markdown-body'
+				});
+			});
+			//-->
+			</SCRIPT>
+	  

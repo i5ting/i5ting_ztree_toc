@@ -263,7 +263,13 @@ function factor(opts ,count,current) {
 							$(this).show().css('color','black');
 						});
 					}
-				}	
+				},
+				onRightClick: function(event, treeId, treeNode) {
+					if(treeNode.id == 1){
+						// TODO: when right_click root node:table content
+						console.log('right_click root table of content');
+					}
+				}
 			}
 		}
 	};

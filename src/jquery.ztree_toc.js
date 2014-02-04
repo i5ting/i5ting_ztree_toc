@@ -129,9 +129,9 @@ function factor(opts ,count,current){
 
 		log($(header_obj).text());
 		
-		opts._header_offsets.push($(header_obj).offset().top - opts.highlightOffset);
+		opts._header_offsets.push($(header_obj).offset().top - opts.highlight_offset);
 		
-		log('h offset ='+( $(header_obj).offset().top - opts.highlightOffset ) );
+		log('h offset ='+( $(header_obj).offset().top - opts.highlight_offset ) );
 		
 		opts._header_nodes.push({
 			id:id, 
@@ -179,7 +179,7 @@ function factor(opts ,count,current){
 	 * 初始化
 	 */	
 	function init_with_config(opts){
-		opts.highlightOffset = $(opts.documment_selector).offset().top;
+		opts.highlight_offset = $(opts.documment_selector).offset().top;
 	}
 	
 	function log(str){
@@ -218,8 +218,11 @@ function factor(opts ,count,current){
 		_header_offsets: [],
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
-		highlightOffset: 0,
+		highlight_offset: 0,
 		highlight_on_scroll: true,
+		/*
+		 * 计算滚动判断当前位置的时间，默认是50毫秒
+		 */
 		refresh_scroll_time: 50,
 		documment_selector: 'body',
 		is_posion_top: false,

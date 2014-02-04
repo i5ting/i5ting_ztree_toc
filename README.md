@@ -2,6 +2,8 @@
 
 this is a jQuery plugin for preview  markdown table of content
 
+[](preview/README.html)
+
 ![](demo/3.png)
 
 ![](demo/4.png)

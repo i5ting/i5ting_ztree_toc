@@ -1,4 +1,4 @@
-/*! ztree_toc - v0.1.0 - 2014-02-04
+/*! ztree_toc - v0.2.0 - 2014-02-04
 * https://github.com/i5ting/jQuery.zTree_Toc.js
 * Copyright (c) 2014 alfred.sang; Licensed MIT */
 function encode_id_with_array(opts,arr){

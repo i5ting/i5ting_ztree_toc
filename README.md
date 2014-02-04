@@ -38,6 +38,10 @@ And then execute:
 	
 ## 例子
 
+@see demo/*.html
+
+for example:
+
 	$(document).ready(function(){
 		$('#tree').ztree_toc({
 			is_auto_number: true,
@@ -59,6 +63,9 @@ or see at [CONTRIBUTING.md](CONTRIBUTING.md)
 ## 版本历史
 
 - v0.1.0 初始化版本 
+- v0.2.0 支持正文滚动，同时更新ztree
+
+@see at [History.md](History.md)
 
 ## Checklist
 

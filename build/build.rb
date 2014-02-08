@@ -145,7 +145,7 @@ def build_with_dir(destiny_dir)
 		    </html>
 				<script type="text/javascript" src="../../js/jquery-1.4.4.min.js"></script>
 				<script type="text/javascript" src="../../js/jquery.ztree.core-3.5.js"></script>
-				<script type="text/javascript" src="../../jquery.ztree_toc.js"></script>
+				<script type="text/javascript" src="../../ztree_toc.js"></script>
 				<SCRIPT type="text/javascript" >
 				<!--
 				$(document).ready(function(){

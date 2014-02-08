@@ -94,7 +94,7 @@ function factor(opts ,count,current) {
 		
 		if(opts.is_auto_number == true) {
 			var _previos_text = $(header_obj).text().replace(opts._headers.join('.'),'');
-			$(header_obj).text( opts._headers.join('.') + '. ' + _previos_text );
+			$(header_obj).text(opts._headers.join('.') + '. ' + $(header_obj).text());
 		}
 	}
 	

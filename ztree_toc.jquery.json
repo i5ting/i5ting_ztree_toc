@@ -3,20 +3,20 @@
   "title": "ztree_toc",
   "description": "ztree toc jquery plugin",
   "version": "0.2.4",
-  "homepage": "https://github.com/i5ting/jQuery.zTree_Toc.js",
+  "homepage": "http://i5ting.github.io/i5ting_ztree_toc/",
   "author": {
     "name": "alfred.sang",
     "email": "shiren1118@126.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:i5ting/jQuery.zTree_Toc.js.git"
+    "url": "git@github.com:i5ting/i5ting_ztree_toc.git"
   },
-  "bugs": "https://github.com/i5ting/jQuery.zTree_Toc.js/issues",
+  "bugs": "https://github.com/i5ting/i5ting_ztree_toc/issues",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/i5ting/jQuery.zTree_Toc.js/blob/master/LICENSE-MIT"
+      "url": "https://github.com/i5ting/i5ting_ztree_toc/blob/master/LICENSE-MIT"
     }
   ],
   "dependencies": {

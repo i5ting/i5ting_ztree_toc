@@ -1,6 +1,6 @@
 {
   "name": "ztree_toc",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "engines": {
     "node": ">= 0.8.0"
   },

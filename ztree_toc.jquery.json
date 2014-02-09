@@ -2,7 +2,7 @@
   "name": "ztree_toc",
   "title": "ztree_toc",
   "description": "ztree toc jquery plugin",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/i5ting/jQuery.zTree_Toc.js",
   "author": {
     "name": "alfred.sang",
@@ -22,5 +22,5 @@
   "dependencies": {
     "jquery": "*"
   },
-  "keywords": []
+  "keywords": ["table of content","markdown","ztree","toc","i5ting","alfred.sang"]
 }

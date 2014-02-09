@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>second tab example</title>
+	<link href="tab.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="tab_click">
+		<div class="tab_header">
+			<ul>
+				<li class="active">选项卡一</li>
+				<li>选项卡二</li>
+				<li>选项卡三</li>
+			</ul>
+		</div>
+		<div class="tab_content">
+			<div class='tab_content_item active'>
+				我是第一个内容
+			</div>
+			<div class='tab_content_item'>
+				我是第二个内容
+			</div>
+			<div class='tab_content_item'>
+				我是第三个内容
+			</div>
+		</div>
+	</div>
+	
+	<div class="tab_mouseover">
+		<div class="tab_header">
+			<ul>
+				<li class="active">选项卡一</li>
+				<li>选项卡二</li>
+				<li>选项卡三</li>
+			</ul>
+		</div>
+		<div class="tab_content">
+			<div class='tab_content_item active'>
+				我是第一个内容
+			</div>
+			<div class='tab_content_item'>
+				我是第二个内容
+			</div>
+			<div class='tab_content_item'>
+				我是第三个内容
+			</div>
+		</div>
+	</div>
+	
+	<script src="../lib/jquery-1.10.2.min.js"></script>
+	<script src="tab.js"></script>
+	<script>
+		$(function(){
+			$('.tab_click').tab({
+				trigger_event_type:'click', //mouseover | click 默认是click
+			});
+			$('.tab_mouseover').tab({
+				trigger_event_type:'mouseover', //mouseover | click 默认是click
+			});
+		});
+	</script>
+</body>
+</html>

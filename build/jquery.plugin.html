@@ -1,0 +1,906 @@
+
+		    <html>
+		      <head>
+					  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		        <title>jquery.plugin</title>
+						
+						<link href="style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+						<link href="style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+				
+					  <style>
+						pre {
+						    counter-reset: line-numbering;
+						    border: solid 1px #d9d9d9;
+						    border-radius: 0;
+						    background: #fff;
+						    padding: 0;
+						    line-height: 23px;
+						    margin-bottom: 30px;
+						    white-space: pre;
+						    overflow-x: auto;
+						    word-break: inherit;
+						    word-wrap: inherit;
+						}
+
+						pre a::before {
+						  content: counter(line-numbering);
+						  counter-increment: line-numbering;
+						  padding-right: 1em; /* space after numbers */
+						  width: 25px;
+						  text-align: right;
+						  opacity: 0.7;
+						  display: inline-block;
+						  color: #aaa;
+						  background: #eee;
+						  margin-right: 16px;
+						  padding: 2px 10px;
+						  font-size: 13px;
+						  -webkit-touch-callout: none;
+						  -webkit-user-select: none;
+						  -khtml-user-select: none;
+						  -moz-user-select: none;
+						  -ms-user-select: none;
+						  user-select: none;
+						}
+
+						pre a:first-of-type::before {
+						  padding-top: 10px;
+						}
+
+						pre a:last-of-type::before {
+						  padding-bottom: 10px;
+						}
+
+						pre a:only-of-type::before {
+						  padding: 10px;
+						}
+					
+						.highlight { background-color: #ffffcc } /* RIGHT */
+						</style>
+					  <link rel="stylesheet" href="style/zTreeStyle/zTreeStyle.css" type="text/css">
+					  <style>
+					
+						.ztree li a.curSelectedNode {
+							padding-top: 0px;
+							background-color: #FFE6B0;
+							color: black;
+							height: 16px;
+							border: 1px #FFB951 solid;
+							opacity: 0.8;
+						}
+						.ztree{
+							overflow: auto;
+							height:100%;
+							min-height: 200px;
+							top: 0px;
+						}
+					  </style>
+		      </head>
+		      <body>
+					  <div>
+								<div style='width:30%;'>
+										<ul id="tree" class="ztree" style='width:100%'>
+				
+										</ul>
+								</div>
+				        <div id='readme' style='width:70%;margin-left:25%;'>
+				          	<article class='markdown-body'>
+				            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>How to write jQuery plugin?</h1>
+
+<h2>前言</h2>
+
+<p>jQuery学习通常会经历三个阶段:</p>
+
+<ul>
+<li>会用jquery是第一阶段</li>
+<li>能抽象成插件是第二阶段</li>
+<li>让插件足够灵活强大是第三阶段</li>
+</ul>
+
+<p>现在，知道自己处在什么阶段了么？</p>
+
+<p>这里假设读者已经通过第一阶段。如果jQuery还不够熟悉，请继续<a href="http://api.jquery.com">http://api.jquery.com</a></p>
+
+<h2>jQuery支持2种插件方式</h2>
+
+<ul>
+<li>$.somePlugin</li>
+<li>$.fn.somePlugin</li>
+</ul>
+
+<h3>Global工具类的插件</h3>
+
+<p>比如</p>
+<div class="highlight"><pre><span class="nv">$.trim</span>(<span class="s">&#39;hello world  &#39;</span>)
+</pre></div>
+<p>这个方法是用于去掉空格的工具方法。它其实是给jQuery对象上增加了trim方法。</p>
+
+<p>此种插件一般是工具类的方法。</p>
+
+<h3>基于selector的插件</h3>
+
+<p>比如</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.mytab&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">({</span>
+    <span class="nx">change</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;current index = &#39;</span> <span class="o">+</span> <span class="nx">index</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<p>这实际是一个tab插件最简单的用法。</p>
+
+<p>这个插件的特点是它前面必须是选择器，那么就可以是一个也可以多个，因为选择器有很多种，选择器返回的是数组，比如例子中的.mytab，在一个html文档里可以有多个</p>
+
+<p>比如</p>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;mytab&#39;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;mytab&#39;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;mytab&#39;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;mytab&#39;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<p>这样就可以形成4个tab里。</p>
+
+<p>jQuery的哲学是“write less，do more”,它做到了么？</p>
+
+<h3>我们要讲的是后者</h3>
+
+<p>相比较而言，工具类的插件基本没有难度，它就是普通的function，即没有配置也没有selector，所以这里不做介绍。
+而基于selector的插件复用程度高，又是基于配置的，在实际中应用非常广泛，是我们本节介绍的重点。</p>
+
+<h2>什么是Tab？</h2>
+
+<p><img src="images/tab.gif" alt=""></p>
+
+<h3>看一下小灰灰的tab v1</h3>
+<div class="highlight"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+    *{
+        margin: 0; 
+        padding: 0;
+        list-style: none;
+    }
+    #tab {
+        width: 600px;
+        height: 300px;
+        border: 1px solid #ccc;
+    }
+    #tab &gt; div{
+        display: none;
+    }
+    #tab_btn {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+    #tab_btn li {
+        float: left;
+        width: 200px;
+        text-align: center;;
+    }
+    #tab_btn li.on{
+        background: #ccc;
+    }
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab_btn&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;on&quot;</span><span class="nt">&gt;</span>选项卡一<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>选项卡二<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>选项卡三<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;display:block&quot;</span><span class="nt">&gt;</span>我是第一个内容<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div&gt;</span>我是第二个内容<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div&gt;</span>我是第三个内容<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;../lib/jquery-1.10.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+    $(&#39;#tab_btn li&#39;).on(&#39;mouseover&#39;, function (){
+        $(&#39;#tab_btn li&#39;).removeClass(&#39;on&#39;);
+        $(this).addClass(&#39;on&#39;);
+
+        $(&#39;#tab div&#39;).hide();
+        $(&#39;#tab div&#39;).eq($(this).index()).show();
+    })
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<h3>它有几个明显问题</h3>
+
+<ul>
+<li>样式与js代码没有和html分离</li>
+<li>tab功能实现里，但无法复用，因为他用的是id方式</li>
+<li>tab的骨架html模板也不合理</li>
+</ul>
+
+<h3>狮子的故事</h3>
+
+<p>曾经有一个小伙伴，写下来这样的代码</p>
+<div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab_btn&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;lion&quot;</span><span class="nt">&gt;</span>选项卡一<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>选项卡二<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>选项卡三<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+<p>然后我在读css代码的时候，发现</p>
+<div class="highlight"><pre><span class="p">.</span><span class="n">lion</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+<p>我看了很久，lion是狮子的意思，那这里呢？</p>
+
+<p>后来才明白，原来是li on的意思，也就是选中的tab的状态是on。</p>
+
+<p>命名是非常容易闹笑话的，其实，这里用active更合适</p>
+
+<h3>看一下小灰灰的tab v2</h3>
+
+<p>提取css和js的部分不是本章重点，下面比较一下重构后的tab骨架结构</p>
+
+<p>之前的tab骨架</p>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;tab_btn&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;on&quot;</span><span class="nt">&gt;</span>选项卡一<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>选项卡二<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>选项卡三<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;display:block&quot;</span><span class="nt">&gt;</span>我是第一个内容<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>我是第二个内容<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>我是第三个内容<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<p>重构后的代码</p>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab_header&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>选项卡一<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>选项卡二<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>选项卡三<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab_content&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;tab_content_item&#39;</span>  <span class="na">style=</span><span class="s">&quot;display:block&quot;</span><span class="nt">&gt;</span>
+            我是第一个内容
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;tab_content_item&#39;</span><span class="nt">&gt;</span>
+            我是第二个内容
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;tab_content_item&#39;</span><span class="nt">&gt;</span>
+            我是第三个内容
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<p>这样的代码结构是不是更为清晰呢？</p>
+
+<h3>重构行内样式</h3>
+
+<p>还有点小瑕疵，下面代码用了行内样式</p>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;tab_content_item&#39;</span>  <span class="na">style=</span><span class="s">&quot;display:block&quot;</span><span class="nt">&gt;</span>
+    我是第一个内容
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<p>修改如下</p>
+<div class="highlight"><pre><span class="c1">// html</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="k">class</span><span class="o">=</span><span class="p">&#39;</span><span class="n">tab_content_item</span> <span class="n">active</span><span class="p">&#39;</span><span class="o">&gt;</span>
+    <span class="err">我是第一个内容</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="c1">// css</span>
+<span class="p">.</span><span class="n">tab_content</span> <span class="p">.</span><span class="n">active</span><span class="p">{</span>
+    <span class="nl">display:</span><span class="n">block</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>把行内样式抽象成状态，继而让代码更具可读性</p>
+
+<h3>v2的js</h3>
+
+<p>结构改了，js也一定做了修改，tab.js具体内容如下：</p>
+<div class="highlight"><pre><span class="p">;</span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab_header li&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(){</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab_header li&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab_content div&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab_content div&#39;</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">index</span><span class="p">()).</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">})</span>
+<span class="p">});</span>
+</pre></div>
+<h3>点评</h3>
+
+<p>v2的js只是根据tab的骨架接口修改而进行了简单修改，主要是dom selector的修改</p>
+
+<p>没有什么特别值得说明的。</p>
+
+<h3>让我们看看一个页面多个tab，它如何？</h3>
+
+<p>详见 jQuery.tab_more.html</p>
+
+<p>出现的问题是在第二个tab上滑动的时候，更新的是第一个tab content，这是为什么呢？</p>
+
+<p>答：js代码写的太随意，没有注意控制组件自身管控范围</p>
+
+<p><strong><em>不严谨是写代码的大忌</em></strong></p>
+
+<h2>开始写第一个插件</h2>
+
+<p>代码位于plugin_first</p>
+
+<p>让我们动手改造一下tab.js吧：</p>
+
+<h3>代码</h3>
+<div class="highlight"><pre>;(<span class="n">function</span>($) { 
+
+    <span class="nv">$.fn</span>.<span class="n">tab</span> = <span class="n">function</span>(<span class="n">options</span>) {
+        // 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+        <span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+
+        <span class="k">return</span> <span class="n">this</span>.<span class="nb">each</span>(<span class="n">function</span>() {
+            <span class="n">var</span> <span class="n">obj</span> = $(<span class="n">this</span>);
+
+            $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">on</span>(<span class="s">&#39;mouseover&#39;</span>, <span class="n">function</span> (){
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">removeClass</span>(<span class="s">&#39;active&#39;</span>);
+                $(<span class="n">this</span>).<span class="n">addClass</span>(<span class="s">&#39;active&#39;</span>);
+
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="n">hide</span>();
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="o">eq</span>($(<span class="n">this</span>).<span class="nb">index</span>()).<span class="n">show</span>();
+            })      
+        });
+        // <span class="nb">each</span> <span class="nb">end</span>
+    }
+
+    //定义默认
+    <span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span> = {
+
+    };
+
+})(<span class="n">jQuery</span>);
+</pre></div>
+<p>这段代码除了套用jQuery plugin模板外，就是几处select变成基于obj的查找的selector，其他与之前无异。</p>
+
+<p>是不是很简单？</p>
+
+<h3>解释一下配置项</h3>
+<div class="highlight"><pre>// 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+<span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+</pre></div>
+<h3>缓存this</h3>
+<div class="highlight"><pre><span class="c1">// 将defaults 和 options 参数合并到{}</span>
+<span class="k">var</span> <span class="n">obj</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</pre></div>
+<h3>select和$.fn</h3>
+
+<h3>调用方式</h3>
+<div class="highlight"><pre><span class="nt">&lt;script&gt;</span>
+    $(function(){
+        $(&#39;.tab&#39;).tab();
+    });
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+<p>是不是更简单？</p>
+
+<h3>jQuery plugin template</h3>
+<div class="highlight"><pre>;(<span class="n">function</span>($) { 
+
+    <span class="nv">$.fn</span>.<span class="n">XXXXXX</span> = <span class="n">function</span>(<span class="n">options</span>) {
+        // 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+        <span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">XXXXXX</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+
+        <span class="k">return</span> <span class="n">this</span>.<span class="nb">each</span>(<span class="n">function</span>() {
+            <span class="n">var</span> <span class="n">obj</span> = $(<span class="n">this</span>);
+
+            ...
+        });
+        // <span class="nb">each</span> <span class="nb">end</span>
+    }
+
+    //定义默认
+    <span class="nv">$.fn</span>.<span class="n">XXXXXX</span>.<span class="n">defaults</span> = {
+
+    };
+
+})(<span class="n">jQuery</span>);
+</pre></div>
+<h3>插件特点</h3>
+
+<ol>
+<li><p>有默认项</p>
+<div class="highlight"><pre><span class="nv">$.fn</span>.<span class="n">XXXXXX</span>.<span class="n">defaults</span>
+</pre></div></li>
+<li><p>基于selector</p>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+    <span class="p">...</span>
+<span class="p">});</span>
+</pre></div></li>
+</ol>
+
+<p>解读：</p>
+
+<ul>
+<li>有默认项，是约定大约配置，让用户用的时候如果没有个性化需求，可以很简单，安装插件的默认配置走，如果有个性化需求，修改配置项，同样很简单</li>
+<li>基于selector意味着你可以复用，给tag或class应用此插件，以便写更少代码，完成更多功能</li>
+</ul>
+
+<p><strong><em>亲，你明白插件的好处了么？如果没明白继续往下看</em></strong></p>
+
+<h2>jQuery插件配置项</h2>
+
+<p>这其实算一个高级话题：</p>
+
+<ul>
+<li>会用jquery是第一阶段</li>
+<li>能抽象成插件是第二阶段</li>
+<li>让插件足够灵活强大是第三阶段</li>
+</ul>
+
+<p>代码位于plugin_second</p>
+
+<p>配置项分2类</p>
+
+<ul>
+<li>普通配置项</li>
+<li>回调函数</li>
+</ul>
+
+<h3>迭代1：普通配置项</h3>
+
+<p>回顾一下之前tab，发现我们的tab是只能鼠标移动到上面才能切换，那是不是所有tab都这样呢？
+当然不是了，我们看到很多网站的tab都是点击切换的，那么我们如何能让我们的tab支持这2种方式呢？</p>
+
+<h3>支持tab触发事件选项</h3>
+<div class="highlight"><pre>;(<span class="n">function</span>($) { 
+
+    <span class="nv">$.fn</span>.<span class="n">tab</span> = <span class="n">function</span>(<span class="n">options</span>) {
+        // 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+        <span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+
+        <span class="k">return</span> <span class="n">this</span>.<span class="nb">each</span>(<span class="n">function</span>() {
+            <span class="n">var</span> <span class="n">obj</span> = $(<span class="n">this</span>);
+
+            $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">on</span>(<span class="n">opts</span>.<span class="n">trigger_event_type</span>, <span class="n">function</span> (){
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">removeClass</span>(<span class="s">&#39;active&#39;</span>);
+                $(<span class="n">this</span>).<span class="n">addClass</span>(<span class="s">&#39;active&#39;</span>);
+
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="n">hide</span>();
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="o">eq</span>($(<span class="n">this</span>).<span class="nb">index</span>()).<span class="n">show</span>();
+            })      
+        });
+        // <span class="nb">each</span> <span class="nb">end</span>
+    }
+
+    //定义默认
+    <span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span> = {
+        <span class="n">trigger_event_type:&#39;click&#39;</span>,<span class="sr"> //</span><span class="n">mouseover</span> | <span class="n">click</span> 默认是<span class="n">click</span>
+    };
+
+})(<span class="n">jQuery</span>);
+</pre></div>
+<p>这就是普通配置项的例子，配置项的值是js支持的类型</p>
+
+<h3>示例1</h3>
+
+<p>首先看一下plugin_second/jQuery.tab.html它没有任何变化</p>
+<div class="highlight"><pre><span class="nt">&lt;script&gt;</span>
+    $(function(){
+        $(&#39;.tab&#39;).tab();
+    });
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+<p>默认项是click，所以这个tab只能点击</p>
+
+<h3>示例2</h3>
+
+<p>看一下plugin_second/jQuery.tab_more.html，第一个tab只能点击，第二个tab只能鼠标划过</p>
+<div class="highlight"><pre><span class="nt">&lt;script&gt;</span>
+    $(function(){
+        $(&#39;.tab_click&#39;).tab({
+            trigger_event_type:&#39;click&#39;, //mouseover | click 默认是click
+        });
+        $(&#39;.tab_mouseover&#39;).tab({
+            trigger_event_type:&#39;mouseover&#39;, //mouseover | click 默认是click
+        });
+    });
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+<p>这里补充一点：第一个tab完全和例子一样，既然默认项都是click，再写的话就真有点
+<strong><em>脱裤子放屁-多此一举</em></strong>
+了</p>
+
+<h3>迭代2：回调函数</h3>
+
+<p>jquery_plugin/plugin_three</p>
+
+<p>既然用tab，就是利用它可以在一个地方显示多个内容，点击的时候切换对应的tab content，tab内容不可能都是静态的，那么这时候怎么办？</p>
+
+<p>是不是应该在点击的时候更改内容呢？答案是回调函数，笨啦，前面不是说配置项有2种么？</p>
+
+<h3>回调函数</h3>
+
+<p>这就是普通配置项的例子，配置项的值是js支持的类型</p>
+<div class="highlight"><pre>;(<span class="n">function</span>($) { 
+
+    <span class="nv">$.fn</span>.<span class="n">tab</span> = <span class="n">function</span>(<span class="n">options</span>) {
+        // 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+        <span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+
+        <span class="k">return</span> <span class="n">this</span>.<span class="nb">each</span>(<span class="n">function</span>() {
+            <span class="n">var</span> <span class="n">obj</span> = $(<span class="n">this</span>);
+
+            $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">on</span>(<span class="n">opts</span>.<span class="n">trigger_event_type</span>, <span class="n">function</span> (){
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">removeClass</span>(<span class="s">&#39;active&#39;</span>);
+                $(<span class="n">this</span>).<span class="n">addClass</span>(<span class="s">&#39;active&#39;</span>);
+
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="n">hide</span>();
+                $(<span class="n">obj</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="o">eq</span>($(<span class="n">this</span>).<span class="nb">index</span>()).<span class="n">show</span>();
+
+                <span class="n">opts</span>.<span class="n">change</span>($(<span class="n">this</span>).<span class="nb">index</span>());
+            })      
+        });
+        // <span class="nb">each</span> <span class="nb">end</span>
+    }
+
+    //定义默认
+    <span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span> = {
+        <span class="n">trigger_event_type:&#39;click&#39;</span>,<span class="sr"> //</span><span class="n">mouseover</span> | <span class="n">click</span> 默认是<span class="n">click</span>
+        <span class="n">change:</span> <span class="n">function</span>(<span class="nb">index</span>){
+            <span class="n">console</span>.<span class="nb">log</span>(<span class="s">&#39;current index = &#39;</span> + <span class="nb">index</span>);
+        }
+    };
+
+})(<span class="n">jQuery</span>);
+</pre></div>
+<h3>生效了么？</h3>
+
+<p>打开jquery_plugin/plugin_three/jQuery.tab.html</p>
+
+<p><img src="images/jquery_plugin/debug_with_callback.png" alt=""></p>
+
+<h3>变动</h3>
+
+<ol>
+<li><p>增加了change配置项</p>
+<div class="highlight"><pre>//定义默认
+<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span> = {
+    ......
+    <span class="n">change:</span> <span class="n">function</span>(<span class="nb">index</span>){
+        <span class="n">console</span>.<span class="nb">log</span>(<span class="s">&#39;current index = &#39;</span> + <span class="nb">index</span>);
+    }
+};
+</pre></div></li>
+<li><p>在插件内部调用了此回调函数</p>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="nx">obj</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab_header li&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="nx">opts</span><span class="p">.</span><span class="nx">trigger_event_type</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(){</span>
+        <span class="p">......</span>
+
+        <span class="nx">opts</span><span class="p">.</span><span class="nx">change</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">index</span><span class="p">());</span>
+    <span class="p">})</span>      
+<span class="p">});</span>
+</pre></div></li>
+</ol>
+
+<h3>回调函数最需要注意的问题</h3>
+
+<ul>
+<li>调用场合，在什么地方调用，这是生命周期的核心问题</li>
+<li>参数，确保在调用处有这些值</li>
+<li>回调函数也要有默认行为的</li>
+</ul>
+
+<h3>总结</h3>
+
+<table>
+    <tr>
+        <td>配置项类型</td> 
+        <td> 数据类型 </td>
+        <td> 特点</td>
+    </tr>
+    <tr>
+        <td>普通配置项</td> 
+        <td> js基本类型 </td>
+        <td>不可变</td>
+    </tr>
+    <tr>
+        <td>回调函数配置项 </td>
+        <td>函数</td>
+        <td>可变行为</td>
+    </tr>
+</table>
+
+<h3>迭代3：重构代码</h3>
+
+<p>jquery_plugin/plugin_four</p>
+<div class="highlight"><pre>;(<span class="n">function</span>($) { 
+
+    /**
+     * 公共函数: 初始化<span class="n">tab</span>出发事件
+     */ 
+    <span class="n">function</span> <span class="n">init_tab_trigger_event</span>(<span class="n">container</span>,<span class="n">opts</span>) {
+        $(<span class="n">container</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">on</span>(<span class="n">opts</span>.<span class="n">trigger_event_type</span>, <span class="n">function</span> (){
+            $(<span class="n">container</span>).<span class="n">find</span>(<span class="s">&#39;.tab_header li&#39;</span>).<span class="n">removeClass</span>(<span class="s">&#39;active&#39;</span>);
+            $(<span class="n">this</span>).<span class="n">addClass</span>(<span class="s">&#39;active&#39;</span>);
+
+            $(<span class="n">container</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="n">hide</span>();
+            $(<span class="n">container</span>).<span class="n">find</span>(<span class="s">&#39;.tab_content div&#39;</span>).<span class="o">eq</span>($(<span class="n">this</span>).<span class="nb">index</span>()).<span class="n">show</span>();
+
+            <span class="n">opts</span>.<span class="n">change</span>($(<span class="n">this</span>).<span class="nb">index</span>());
+        })      
+    }
+
+    /**
+     * 公共函数: 初始化<span class="n">tab</span>出发事件
+     */
+    <span class="n">function</span> <span class="n">init_with_config</span>(<span class="n">opts</span>){
+        <span class="n">_init_aaa_with_config</span>(<span class="n">opts</span>);
+
+        <span class="n">_init_bbb_with_config</span>(<span class="n">opts</span>);
+
+        <span class="n">_init_ccc_with_config</span>(<span class="n">opts</span>);
+    }
+
+    /**
+     * 私有函数
+     */
+    <span class="n">function</span> <span class="n">_init_aaa_with_config</span>(<span class="n">opts</span>){
+
+    }
+
+    <span class="n">function</span> <span class="n">_init_bbb_with_config</span>(<span class="n">opts</span>){
+
+    }
+
+    <span class="n">function</span> <span class="n">_init_ccc_with_config</span>(<span class="n">opts</span>){
+
+    }
+
+    <span class="nv">$.fn</span>.<span class="n">tab</span> = <span class="n">function</span>(<span class="n">options</span>) {
+        // 将<span class="n">defaults</span> 和 <span class="n">options</span> 参数合并到{}
+        <span class="n">var</span> <span class="n">opts</span> = <span class="nv">$.extend</span>({},<span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span>,<span class="n">options</span>);
+
+        <span class="k">return</span> <span class="n">this</span>.<span class="nb">each</span>(<span class="n">function</span>() {
+            <span class="n">var</span> <span class="n">obj</span> = $(<span class="n">this</span>);
+
+            // 根据配置进行初始化
+            <span class="n">init_with_config</span>(<span class="n">opts</span>);
+
+            // 初始化<span class="n">tab</span>出发事件
+            <span class="n">init_tab_trigger_event</span>(<span class="n">obj</span>,<span class="n">opts</span>);
+        });
+        // <span class="nb">each</span> <span class="nb">end</span>
+    }
+
+    //定义默认
+    <span class="nv">$.fn</span>.<span class="n">tab</span>.<span class="n">defaults</span> = {
+        <span class="n">trigger_event_type:&#39;click&#39;</span>,<span class="sr"> //</span><span class="n">mouseover</span> | <span class="n">click</span> 默认是<span class="n">click</span>
+        <span class="n">change:</span> <span class="n">function</span>(<span class="nb">index</span>){
+            <span class="n">console</span>.<span class="nb">log</span>(<span class="s">&#39;current index = &#39;</span> + <span class="nb">index</span>);
+        }
+    };
+
+})(<span class="n">jQuery</span>);
+</pre></div>
+<h3>将插件核心逻辑，抽象成公共函数</h3>
+<div class="highlight"><pre><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+
+    <span class="c1">// 根据配置进行初始化</span>
+    <span class="nx">init_with_config</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+
+    <span class="c1">// 初始化tab出发事件</span>
+    <span class="nx">init_tab_trigger_event</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="nx">opts</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+<h3>将大的公共函数拆解成n个私有函数</h3>
+<div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * 公共函数: 初始化tab出发事件</span>
+<span class="cm"> */</span>
+<span class="k">function</span> <span class="n">init_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 调用私有函数</span>
+    <span class="n">_init_aaa_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+
+    <span class="c1">// 调用私有函数</span>
+    <span class="n">_init_bbb_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+
+    <span class="c1">// 调用私有函数</span>
+    <span class="n">_init_ccc_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 私有函数</span>
+<span class="cm"> */</span>
+<span class="k">function</span> <span class="n">_init_aaa_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="n">_init_bbb_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">)</span> <span class="p">{</span> 
+
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="n">_init_ccc_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<h3>注意注释和编码规范</h3>
+
+<p>函数注释</p>
+<div class="highlight"><pre><span class="cm">/**</span>
+<span class="cm"> * 私有函数</span>
+<span class="cm"> */</span>
+<span class="k">function</span> <span class="n">_init_aaa_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>函数内注释</p>
+<div class="highlight"><pre><span class="c1">// 调用私有函数</span>
+<span class="n">_init_ccc_with_config</span><span class="p">(</span><span class="n">opts</span><span class="p">);</span>
+</pre></div>
+<p>函数体前面加一个空格</p>
+
+<h2>使用grunt创建项目</h2>
+
+<ul>
+<li><a href="https://github.com/gruntjs/grunt-init-jquery-sample/blob/master/grunt.js">Sample jQuery plugin gruntfile</a> (as generated by the <code>init:jquery</code> task)</li>
+</ul>
+
+<p>grunt init:jquery </p>
+
+<h2>如何发布到jquery plugin官方网站上</h2>
+
+<p>jquery插件标准化</p>
+
+<p>1月16日，jQuery Foundation发布了新版插件资源库，以期能够为jQuery 核心代码库的第三方开发带来更好的支持与促进。</p>
+
+<p>自从一年多以前，早先的jQuery插件站点关闭以来，jQuery Foundation团队就在着手搭建一个能够更智能地抵御垃圾的插件系统。作为jQuery Foundation的秘书长，Scott Gonzalez同时也是新站点在GitHub上最大的贡献者。他说到，这个新站点“将通过某个大多数垃圾制造者都不会关注的提交过程 —— 修订控制系统，来减少垃圾的数量。”利用GitHub钩子（Hooks），第三方jQuery插件的开发者将获得前所未有的丰富工具集。</p>
+
+<p>“托管在GitHub或者Bitbucket这样的平台上的一大好处是，作为用户，你可以直接获得一系列功能。比方说：你可以联系作者，你可以看到代码是否还在继续维护，你也可以检查bug报告或提交bug，甚至可以提交bug 的补丁。这在之前的站点上多数都做不到。我们认为，促使用户使用能够免费提供这些功能的服务，并且在已有大量用户每天都在使用的环境中工作，是一种巨大的进步。” Gonzalez说到。</p>
+
+<p>要发布你的jQuery插件，你需要利用Post-receive钩子，以及一个Package 清单（manifest）文件。自动化的流程正在创建中。“David Radcliffe已经提交了一个Pull request，为站点新加入了一个Service钩子，使得用户不必再手动填写钩子的URL。我们也计划创建一个能够自动生成清单文件的Grunt任务。” Gonzalez说到。</p>
+
+<p>随着jQuery 2.0的即将到来，现有插件的作者们需要将他们的插件重新发布到新的平台。Gonzalez和其他jQuery Foundation的成员希望为整个社区的积极参与搭建好舞台。“新插件站点的一大亮点是其100%开源，因此整个社区可以建议新特性、讨论特性的优缺点，乃至开发实现新特性。我们非常乐于看到能够为我们的用户提供更好的服务，并把与我们的代码项目同等程度的透明性以及开发性带给我们的这个站点项目，以实现更快的迭代。”</p>
+
+<p>查看英文原文：jQuery&#39;s Github-Driven Plugin Repository Launched
+上面是infoq的文章</p>
+
+<hr>
+
+<p>详细步骤：<a href="http://plugins.jquery.com/docs/publish/">http://plugins.jquery.com/docs/publish/</a></p>
+
+<hr>
+
+<p>我总结一下：</p>
+
+<p>1、Add a Post-Receive Hook
+这步必须做</p>
+
+<p>学习一下<a href="https://help.github.com/articles/post-receive-hooks%E4%B8%8D%E9%94%99%E5%93%A6">https://help.github.com/articles/post-receive-hooks不错哦</a></p>
+
+<p><a href="http://plugins.jquery.com/docs/publish/">http://plugins.jquery.com/docs/publish/</a></p>
+
+<p>Settings -> Service Hooks -> WebHook URLs</p>
+
+<p><a href="http://plugins.jquery.com/postreceive-hook">http://plugins.jquery.com/postreceive-hook</a></p>
+
+<p>2、＊jquery.json可以用grunt生成</p>
+
+<p>grunt init:jquery</p>
+
+<p>3、发布的tag必须和＊jquery.json里的版本一样，可以用v开头</p>
+
+<p>the tag should be either &quot;0.1.1&quot; or &quot;v0.1.1&quot;</p>
+
+<p>建议说不用git tag -f 来覆盖老版本的tag</p>
+
+<h2>实践作业</h2>
+
+<p>答题的同学，还有实践作业，每个人写一个jQuery插件，使用grunt创建，发布到github上，并在jQuery官方网站可以搜到</p>
+
+<p>例如 <a href="http://plugins.jquery.com/?s=ztree">http://plugins.jquery.com/?s=ztree</a> </p>
+
+<h2>笔试</h2>
+
+<ul>
+<li><p>插件有几种？</p></li>
+<li><p>文中举了几个例子？分别用于阐述什么问题</p></li>
+<li><p>插件配置项有几种，举例说明</p></li>
+<li><p>如何重构代码</p></li>
+<li><p>grunt 是做什么的，如果使用grunt创建jQuery插件</p></li>
+<li><p>如何发布插件</p></li>
+<li><p>为什么缓存this</p></li>
+</ul>
+
+				          	</article>
+				        </div>
+						</div>
+						<script src='js/jquery-1.10.2.min.js'></script>
+						<script src='js/jquery.ztree.all-3.5.min.js'></script>
+						<script src='js/jquery.ztree_toc.min.js'></script>
+						<SCRIPT type="text/javascript" >
+							<!--
+							$(document).ready(function(){
+								$('#tree').ztree_toc({
+									is_auto_number:true,
+									documment_selector:'.markdown-body'
+								});
+							});
+							//-->
+						</SCRIPT>
+		      </body>
+		    </html>
+		  

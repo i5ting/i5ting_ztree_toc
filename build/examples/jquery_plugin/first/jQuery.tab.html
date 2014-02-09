@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0; 
+		padding: 0;
+		list-style: none;
+	}
+	#tab {
+		width: 600px;
+		height: 300px;
+		border: 1px solid #ccc;
+	}
+	#tab > div{
+		display: none;
+	}
+	#tab_btn {
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px solid #ccc;
+	}
+	#tab_btn li {
+		float: left;
+		width: 200px;
+		text-align: center;;
+	}
+	#tab_btn li.on{
+		background: #ccc;
+	}
+	</style>
+</head>
+<body>
+	<div id="tab">
+		<ul id="tab_btn">
+			<li class="on">选项卡一</li>
+			<li>选项卡二</li>
+			<li>选项卡三</li>
+		</ul>
+		
+		<div style="display:block">我是第一个内容</div>
+		<div>我是第二个内容</div>
+		<div>我是第三个内容</div>
+	</div>
+	<script src="../lib/jquery-1.10.2.min.js"></script>
+	<script>
+	$('#tab_btn li').on('mouseover', function (){
+		$('#tab_btn li').removeClass('on');
+		$(this).addClass('on');
+
+		$('#tab div').hide();
+		$('#tab div').eq($(this).index()).show();
+	})
+	</script>
+</body>
+</html>

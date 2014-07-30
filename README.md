@@ -32,12 +32,14 @@ And then execute:
 	<!--
 	$(document).ready(function(){
 		$('#tree').ztree_toc({
-	
+
 		});
 	});
 	//-->
 	</SCRIPT>
-	
+
+or use bower to install
+
 ## 例子
 
 @see demo/*.html
@@ -50,7 +52,7 @@ for example:
 			// documment_selector: '.first_part'
 		});
 	});
-	
+
 
 ## Contributing
 
@@ -64,7 +66,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 版本历史
 
-- v0.1.0 初始化版本 
+- v0.1.0 初始化版本
 - v0.2.0 支持正文滚动，同时更新ztree
 
 @see at [History.md](History.md)

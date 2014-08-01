@@ -87,4 +87,4 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-this gem is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+this jq plugin is released under the [MIT License](http://www.opensource.org/licenses/MIT).

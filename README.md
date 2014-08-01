@@ -87,4 +87,4 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-this jq plugin is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+this jQuery plugin is released under the [MIT License](http://www.opensource.org/licenses/MIT).

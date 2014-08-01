@@ -14,7 +14,7 @@ this is a jQuery plugin for preview  markdown table of content
 
 ![](demo/2.png)
 
-## Usage
+## Usages
 
 Add this line to your html file:
 
@@ -40,7 +40,7 @@ And then execute:
 
 or use bower to install
 
-## 例子
+## Example
 
 @see demo/*.html
 
@@ -54,6 +54,11 @@ for example:
 	});
 
 
+## Online examples
+
+- http://i5ting.github.io/msgpack-specification/
+- http://i5ting.github.io/How-to-write-jQuery-plugin/
+
 ## Contributing
 
 1. Fork it
@@ -64,7 +69,7 @@ for example:
 
 or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## 版本历史
+## History
 
 - v0.1.0 初始化版本
 - v0.2.0 支持正文滚动，同时更新ztree
@@ -85,7 +90,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - 滚动动画（TODO）
 - right click to config（TODO）
 
-## 欢迎fork和反馈
+## Welcome fork and feedback
 
 在issue提问或邮件shiren1118@126.com
 

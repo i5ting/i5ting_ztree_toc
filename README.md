@@ -85,6 +85,10 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - 滚动动画（TODO）
 - right click to config（TODO）
 
+## 欢迎fork和反馈
+
+在issue提问或邮件shiren1118@126.com
+
 ## License
 
 this jQuery plugin is released under the [MIT License](http://www.opensource.org/licenses/MIT).

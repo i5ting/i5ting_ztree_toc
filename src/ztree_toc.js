@@ -75,6 +75,18 @@ function factor(opts ,count,current) {
 		t = $.fn.zTree.init(t,opts.ztreeSetting,opts._header_nodes).expandAll(opts.is_expand_all);
 		// alert(opts._headers * 88);
 		// $(opts._zTree).height(opts._headers  * 33 + 33);
+		
+		if(opts.is_posion_top == true){
+			opts.ztreeStyle.top = '0px';
+			
+			if( opts.ztreeStyle.hasOwnProperty('bottom') )
+				delete opts.ztreeStyle.bottom ;
+		}else{
+			opts.ztreeStyle.bottom = '0px';
+			
+			if( opts.ztreeStyle.hasOwnProperty('top') )
+				delete opts.ztreeStyle.top;
+		}
 			
 		$(opts._zTree).css(opts.ztreeStyle);
 	}
@@ -219,7 +231,10 @@ function factor(opts ,count,current) {
 		 */
 		refresh_scroll_time: 50,
 		documment_selector: 'body',
-		is_posion_top: false,
+		/*
+		 * ztree的位置，默认是在上部
+		 */
+		is_posion_top: true,
 		/*
 		 * 默认是否显示header编号
 		 */

@@ -82,6 +82,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - Completely customizable documment selector: 'body' 自定义header文档位置，此处为jq的选择器（已完成）
 - is_auto_number: false, 默认是否显示header编号（已完成）
 - is_expand_all: true,默认是否展开全部（已完成）
+- is_posion_top: true,默认是位于上部（已完成）
 - is_highlight_selected_line是否对选中行，显示高亮效果（TODO）
 - Click to smooth scroll to that spot on the page（TODO）
 - Automatically highlight the current section（TODO）

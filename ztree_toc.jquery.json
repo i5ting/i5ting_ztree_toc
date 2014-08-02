@@ -1,7 +1,8 @@
 {
   "name": "ztree_toc",
   "title": "ztree_toc",
-  "description": "ztree toc jquery plugin",
+  "description": "a jQuery plugin for preview markdown table of content jQuery.zTree_Toc.js toc ztree and online demo site v0.3.0 
+http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#106",
   "version": "0.3.0",
   "homepage": "http://i5ting.github.io/i5ting_ztree_toc/",
   "author": {

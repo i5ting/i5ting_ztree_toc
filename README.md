@@ -60,6 +60,32 @@ for example:
 - http://i5ting.github.io/How-to-write-jQuery-plugin/
 - https://github.com/i5ting/msgpack
 
+## Build
+
+	npm install -g grunt-cli
+	grunt
+	
+console result
+
+```
+➜  i5ting_ztree_toc git:(master) ✗ touch build.sh
+➜  i5ting_ztree_toc git:(master) ✗ grunt 
+Running "qunit:files" (qunit) task
+Testing test/index.html ...OK
+>> 16 assertions passed (28ms)
+
+Running "clean:files" (clean) task
+Cleaning dist...OK
+
+Running "concat:dist" (concat) task
+File "dist/ztree_toc.js" created.
+
+Running "uglify:dist" (uglify) task
+File "dist/ztree_toc.min.js" created.
+
+Done, without errors.
+```
+
 ## Contributing
 
 1. Fork it

@@ -1,11 +1,15 @@
 {
   "name": "ztree_toc",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "engines": {
     "node": ">= 0.8.0"
   },
   "scripts": {
     "test": "grunt qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:i5ting/i5ting_ztree_toc.git"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.7.0",

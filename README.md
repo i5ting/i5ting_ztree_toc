@@ -98,8 +98,10 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## History
 
-- v0.1.0 初始化版本
+- v0.3.0 支持ztree is position top和部分文档
 - v0.2.0 支持正文滚动，同时更新ztree
+- v0.1.0 初始化版本
+
 
 @see at [History.md](History.md)
 

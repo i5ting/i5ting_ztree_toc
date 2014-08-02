@@ -86,6 +86,11 @@ File "dist/ztree_toc.min.js" created.
 Done, without errors.
 ```
 
+this plugin can be find in following ways:
+
+- http://plugins.jquery.com/ztree_toc/
+- bower install ztree_toc
+
 ## Contributing
 
 1. Fork it

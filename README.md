@@ -58,6 +58,7 @@ for example:
 
 - http://i5ting.github.io/msgpack-specification/
 - http://i5ting.github.io/How-to-write-jQuery-plugin/
+- https://github.com/i5ting/msgpack
 
 ## Contributing
 

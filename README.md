@@ -91,6 +91,28 @@ this plugin can be find in following ways:
 - http://plugins.jquery.com/ztree_toc/
 - bower install ztree_toc
 
+## Command Wrapper
+
+a ruby gem wrapper of i5ting_ztree_toc https://github.com/i5ting/tocmd.gem
+
+	gem intall tocmd
+	
+
+`命令概览`
+
+- tocmd 
+
+		把用到的资源文件放到gem目录下，没有放到preview目录下使用方便，但是当你本地，可以节省空间，避免多次copy
+
+- tocmd_local
+
+		把用到的资源文件放到preview目录下
+	
+- tocmd_conf
+
+		和tocmd_local是一样的，都是把js等资源文件放到当前目录下，差别在于读取toc_conf.js文件作为配置，这样利于多次编译markdown的时候一次配置。
+
+
 ## Contributing
 
 1. Fork it

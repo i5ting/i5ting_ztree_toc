@@ -1,0 +1,34 @@
+[
+	{
+		'id':0, 
+		'pId':0 , 
+		'name':"root", 
+		'open':true,
+		'url':'#id',
+		'target':'_self'
+	},
+	{
+		'id':1, 
+		'pId':0 , 
+		'name':"wahaha1", 
+		'open':true,
+		'url':'#id',
+		'target':'_self'
+	},
+	{
+		'id':2, 
+		'pId':0 , 
+		'name':"wahaha2", 
+		'open':true,
+		'url':'#id',
+		'target':'_self'
+	},
+	{
+		'id':3, 
+		'pId':0 , 
+		'name':"wahaha3", 
+		'open':true,
+		'url':'#id',
+		'target':'_self'
+	}
+]

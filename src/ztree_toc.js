@@ -154,7 +154,7 @@ function factor(opts ,count,current) {
 			}
 			
 			timeout = setTimeout(function() {
-				var top = $(window).scrollTop(),highlighted;
+				var top = $(opts.scroll_selector).scrollTop(),highlighted;
 				
 				if(opts.debug) console.log('top='+top);
 			
@@ -172,10 +172,10 @@ function factor(opts ,count,current) {
 			}, opts.refresh_scroll_time);
 		};
 		
-	    if (opts.highlight_on_scroll) {
-	      $(window).bind('scroll', highlight_on_scroll);
-	      highlight_on_scroll();
-	    }
+    if (opts.highlight_on_scroll) {
+      $(opts.scroll_selector).bind('scroll', highlight_on_scroll);
+      highlight_on_scroll();
+    }
 	}
 	
 	/*
@@ -224,6 +224,7 @@ function factor(opts ,count,current) {
 		_header_offsets: [],
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
+		scroll_selector:'window',
 		highlight_offset: 0,
 		highlight_on_scroll: true,
 		/*

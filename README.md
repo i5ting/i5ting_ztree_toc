@@ -103,6 +103,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## History
 
+- v0.4.1 fixed #7  使用标题作为anchor，感谢chanble和oldfeel
 - v0.4.0 支持scroll selector配置可选，默认是window
 - v0.3.0 支持ztree is position top和部分文档
 - v0.2.0 支持正文滚动，同时更新ztree
@@ -125,6 +126,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - 正文移动，更新目录（已完成）
 - 滚动动画（TODO）
 - right click to config（TODO）
+- 使用标题作为anchor，感谢chanble和oldfeel
 
 ## Welcome fork and feedback
 

@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> ZTREE ToC DEMO </TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+	body {
+	background-color: white;
+	margin:0; padding:0;
+	text-align: center;
+	}
+	div, p, table, th, td {
+		list-style:none;
+		margin:0; padding:0;
+		color:#333; font-size:12px;
+		font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	}
+	.ztree li a.curSelectedNode {
+		padding-top: 0px;
+		background-color: #FFE6B0;
+		color: black;
+		height: 16px;
+		border: 1px #FFB951 solid;
+		opacity: 0.8;
+	}
+	.ztree{
+		overflow: auto;
+		height:100%;
+		min-height: 200px;
+		top: 0px;
+	}
+  </style>
+<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="../src/ztree_toc.js"></script>
+	<SCRIPT type="text/javascript" >
+	<!--
+	$(document).ready(function(){
+		$('#tree').ztree_toc({
+			is_auto_number : true,
+			use_head_anchor: true
+		});
+	});
+	//-->
+	</SCRIPT>
+
+ </HEAD>
+
+<BODY>
+
+<TABLE border=0 height=600px align=left>
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+			<ul id="tree" class="ztree">
+				
+			</ul>
+		</TD>
+		<TD width=770px align=left valign=top>
+			
+			<div class='first_part'>
+				<h1>移动web app</h1>
+				<div style='display:block;height:500px;width:100%;background-color:red;'>
+				</div>
+				<h2>HTML5</h2>
+				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+				</div>
+				<h2>CSS</h2>
+				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+				</div>
+				<h2>JavaScript</h2>
+				<div style='display:block;height:500px;width:100%;background-color:green;'>
+				</div>
+				<h3>基本语法</h3>
+				<h4>dsds</h4>
+				<h3>高级用法</h3>
+				<h4>dsds</h4>
+			</div>
+				<h1>第二部分</h1>
+				
+				<h3>hello world</h3>
+				 
+				<h1>第三部分</h1>
+
+				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+				 <h2>解释一下什么是移动web应用开发</h2>
+
+				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+				 <ul>
+				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+				 <li>开发效率高，易于掌握</li>
+				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+				 </ul>
+
+				 <h2>整体架构</h2> 
+
+				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+				 <h2>三部分的关系</h2> 
+
+				 <h2>你一定要清楚【技术栈】</h2>
+
+				 <p>界面UI展现</p>
+				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+				 </pre></div>
+				 <p>界面上的各种动态效果</p>
+				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+				 </pre></div>
+				 <p>与服务器通信</p>
+				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+				 </pre></div>
+				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+				 </pre></div>
+				 <h2>移动端特点</h2>
+
+				 <ul>
+				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+				 <li>viewport？</li>
+				 <li>真的不用兼容浏览器么？</li>
+				 <li>适配屏幕（？响应式布局）</li>
+				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+				 </ul>
+ 
+				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+ 				<h1>移动web app</h1>
+ 				<div style='display:block;height:500px;width:100%;background-color:red;'>
+ 				</div>
+ 				<h2>HTML5</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:lightblue;'>
+ 				</div>
+ 				<h2>CSS</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:blue;'>
+ 				</div>
+ 				<h2>JavaScript</h2>
+ 				<div style='display:block;height:500px;width:100%;background-color:green;'>
+ 				</div>
+ 				<h3>基本语法</h3>
+ 				<h4>dsds</h4>
+ 				<h3>高级用法</h3>
+ 				<h4>dsds</h4>
+ 			</div>
+ 				<h1>第二部分</h1>
+				
+ 				<h3>hello world</h3>
+				 
+ 				<h1>第三部分</h1>
+
+ 				 <p>这次培训的目标是让大家了解移动web开发流程以及技术点，以便大家在以后工作中应用这些技术能够得心应手，有的放矢。</p>
+
+ 				 <h2>解释一下什么是移动web应用开发</h2>
+
+ 				 <h2>为什么要用Hybird（混搭）呢？</h2>
+
+ 				 <p>移动开发分类：原生和hybird，为什么我们要用hybird呢？</p>
+
+ 				 <ul>
+ 				 <li>移动设备越来越强悍，网速越来越快，在移动设备上web app已经可以非常流畅</li>
+ 				 <li>跨平台，通过cordova可以开发一次，在ios和android上都可以使用</li>
+ 				 <li>开发效率高，易于掌握</li>
+ 				 <li>如果你想来一个wap类似的站点，起个服务器就可以了</li>
+ 				 </ul>
+
+ 				 <h2>整体架构</h2> 
+
+ 				 <h2>Webview 和 native代码如何交互</h2>
+ 
+
+ 				 <h2>三部分的关系</h2> 
+
+ 				 <h2>你一定要清楚【技术栈】</h2>
+
+ 				 <p>界面UI展现</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">html5</span> <span class="o">+</span> <span class="n">css3</span> <span class="err">（界面</span><span class="n">UI</span><span class="err">展现）</span>
+ 				 </pre></div>
+ 				 <p>界面上的各种动态效果</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">js</span>           <span class="err">（各种动态效果）</span>
+ 				 </pre></div>
+ 				 <p>与服务器通信</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">ajax</span>         <span class="err">（与服务器通信）</span>
+ 				 </pre></div>
+ 				 <p>移动webapp和OS之间的桥梁：phonegap</p>
+ 				 <div class="highlight"><pre><span class="o">-</span> <span class="n">cordova</span>       <span class="p">(</span><span class="err">亦即</span><span class="n">phonegap</span><span class="err">，是移动</span><span class="n">webapp</span><span class="err">和</span><span class="n">OS</span><span class="err">之间的桥梁，类似于</span><span class="n">shell</span><span class="p">)</span>
+ 				 </pre></div>
+ 				 <h2>移动端特点</h2>
+
+ 				 <ul>
+ 				 <li>ui有点不一样？（囿于屏幕尺寸和原生app影响）</li>
+ 				 <li>viewport？</li>
+ 				 <li>真的不用兼容浏览器么？</li>
+ 				 <li>适配屏幕（？响应式布局）</li>
+ 				 <li>移动端特有事件（如touch，手势等）咋整？</li>
+ 				 <li>更多h5特性？（local storage，css3动画，canvas等？）</li>
+ 				 </ul>
+ 
+ 				 <p>如果大家对cordova不是很了解，以后可以补充一部分。</p>	 
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

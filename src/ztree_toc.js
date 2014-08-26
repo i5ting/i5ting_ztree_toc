@@ -116,16 +116,34 @@ function factor(opts ,count,current) {
 			}
 		}
 	}
+	
+	/*
+	 * create table with head for anchor for example: <h2 id="#Linux基础">Linux基础</h2>
+	 * this method can get a headable anchor
+	 * add by https://github.com/chanble
+	 */
+	function _get_anchor_from_head(header_obj){
+		var name = header_obj.html();
+		var aname = name.split('.');
+		var anchor = aname.pop().trim();
+		return anchor;
+	}
 
 	/*
 	 * 给ztree用的header_nodes增加数据
 	 */
 	function _add_header_node(opts ,header_obj) {
-		var id  = encode_id_with_array(opts,opts._headers);
-		var pid = get_parent_id_with_array(opts,opts._headers);
+		var id  = encode_id_with_array(opts,opts._headers);//for ztree
+		var pid = get_parent_id_with_array(opts,opts._headers);//for ztree
+		var anchor = id;//use_head_anchor.html#第二部分
 
-      	// 设置锚点id
-		$(header_obj).attr('id',id);
+		// 默认使用标题作为anchor
+		if(opts.use_head_anchor == true){
+			anchor = _get_anchor_from_head(header_obj);
+		}
+		
+    // 设置锚点id
+		$(header_obj).attr('id',anchor);
 
 		log($(header_obj).text());
 
@@ -138,7 +156,7 @@ function factor(opts ,count,current) {
 			pId:pid ,
 			name:$(header_obj).text()||'null',
 			open:true,
-			url:'#'+ id,
+			url:'#'+ anchor,
 			target:'_self'
 		});
 	}
@@ -224,6 +242,11 @@ function factor(opts ,count,current) {
 		_header_offsets: [],
 		_header_nodes: [{ id:1, pId:0, name:"Table of Content",open:true}],
 		debug: true,
+		/*
+		 * 使用标题作为anchor
+		 * create table with head for anchor for example: <h2 id="#Linux基础">Linux基础</h2>
+		 */
+		use_head_anchor: true,
     scroll_selector: 'window',
 		highlight_offset: 0,
 		highlight_on_scroll: true,

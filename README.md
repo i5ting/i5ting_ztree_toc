@@ -126,7 +126,7 @@ or @see at [CONTRIBUTING.md](CONTRIBUTING.md)
 - 正文移动，更新目录（已完成）
 - 滚动动画（TODO）
 - right click to config（TODO）
-- 使用标题作为anchor，感谢chanble和oldfeel
+- 使用标题作为anchor，感谢 @chanble 和 @oldfeel（已完成）
 
 ## Welcome fork and feedback
 

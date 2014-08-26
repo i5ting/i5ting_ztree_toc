@@ -245,8 +245,10 @@ function factor(opts ,count,current) {
 		/*
 		 * 使用标题作为anchor
 		 * create table with head for anchor for example: <h2 id="#Linux基础">Linux基础</h2>
+		 * 如果标题是唯一的，建议开启此选项，如果标题不唯一，还是使用数字吧
+		 * 此选项默认是false，不开启
 		 */
-		use_head_anchor: true,
+		use_head_anchor: false,
     scroll_selector: 'window',
 		highlight_offset: 0,
 		highlight_on_scroll: true,

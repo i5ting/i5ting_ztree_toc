@@ -2,17 +2,21 @@
 
 this is a jQuery plugin for preview  markdown table of content
 
-[](preview/README.html)
+Cli tools for compile markdown to html with jquery.ztree_toc.js
+
+- [ruby版本tocmd](https://github.com/i5ting/tocmd.gem)
+- [node版本i5ting_toc](https://github.com/i5ting/tocmd.npm)
+
 
 ![](demo/3.png)
 
-![](demo/4.png)
+<!--![](demo/4.png)
 
 ![](demo/5.png)
 
 ![](demo/1.png)
 
-![](demo/2.png)
+![](demo/2.png) -->
 
 ## Usages
 

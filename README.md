@@ -6,7 +6,7 @@ Cli tools for compile markdown to html with jquery.ztree_toc.js
 
 - [ruby版本tocmd](https://github.com/i5ting/tocmd.gem)
 - [node版本i5ting_toc](https://github.com/i5ting/tocmd.npm)
-
+- [zTree_Toc lite version](https://github.com/i5ting/markdown_toc)
 
 ![](demo/3.png)
 

@@ -76,7 +76,7 @@ function factor(opts ,count,current) {
 		// alert(opts._headers * 88);
 		// $(opts._zTree).height(opts._headers  * 33 + 33);
 
-		if(opts.is_posion_top == true){
+		if(opts.is_posion_top == false){
 			opts.ztreeStyle.top = '0px';
 
 			if( opts.ztreeStyle.hasOwnProperty('bottom') )
